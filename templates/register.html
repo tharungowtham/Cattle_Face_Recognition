@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/static/favicon.gif" type="image/gif" >
+
+    <title>Identified Cow</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        ol {
+            list-style: none;
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        p {
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        li {
+            margin: 5px 0;
+        }
+
+        .my_img {
+            width: 80%;
+            height: auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+
+        
+        {% if exists %}
+        <div class="header">
+            <h3>Identified Cow</h3>
+        </div>
+        <ol>
+            <p>Cow ID:</p>
+            <li>{{ cow_data['cid'] }}</li>
+        </ol>
+        <ol>
+            <p>Owner name:</p>
+            <li>{{ cow_data['owner_name'] }}</li>
+        </ol>
+        <ol>
+            <p>Owner phone:</p>
+            <li>{{ cow_data['owner_phno'] }}</li>
+        </ol>
+        <ol>
+            <p>Owner address:</p>
+            <li>{{ cow_data['owner_address'] }}</li>
+        </ol>
+        <ol>
+            <p>Identified Cow:</p>
+            <img class="my_img" src="data:image/jpeg;charset=utf-8;base64,{{ cow_data['cow_image'] }}" alt="Identified Cow"/>
+        </ol>
+
+        {% else %}
+
+        <h3>Cow Added to Database :)</h3>
+        <img class="my_img" src="data:image/jpeg;charset=utf-8;base64,{{ cow_data['cow_image'] }}" alt="Identified Cow"/>
+
+        {% endif %}
+        
+       
+    </div>
+
+</body>
+<script>
+    setTimeout(()=>{
+        window.location.href = "/"; 
+    }, 10000);
+</script>
+</html>
