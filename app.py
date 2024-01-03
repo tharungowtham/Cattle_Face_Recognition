@@ -6,8 +6,6 @@ It allows users to add cow details, including owner information and an image of 
 Users can also identify a cow by uploading an image, and the application checks for
 similarity with previously registered cows.
 
-Author: [Your Name]
-Date: [Current Date]
 """
 
 from __future__ import annotations
