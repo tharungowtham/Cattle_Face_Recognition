@@ -23,3 +23,11 @@ Make sure you have the following installed on your machine:
 - PyMongo (for MongoDB integration)
 
 Install the required Python packages using the following command:
+
+## *Project Contributors:*
+- Hima Vamshi
+- A. Sai Tharun
+- G. Rohith Reddy
+- M.Varun
+- Bhahu Teja
+- Vasu Dev
